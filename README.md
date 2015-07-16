@@ -27,7 +27,6 @@ This can also use the following format:
 			"database": "$DB_NAME",
 			"username": "$DB_USER",
 			"password": "$DB_PASS",
-			"name": "postgres",
 			"connector": "postgresql",
 			"ssl": true
 		}
