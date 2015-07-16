@@ -1,6 +1,6 @@
 {
   "name": "loopback-connector-pgenv",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "loopback postgres connector that can be configured with environment variable tokens",
   "main": "index.js",
   "scripts": {

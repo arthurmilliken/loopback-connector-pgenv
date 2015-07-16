@@ -8,7 +8,7 @@ replaced with $ENV_VARIABLE_NAME, like this:
 	"myDataSource": {
 		"connector": "pgenv",
 		"properties": {
-			"name": "pgAuth",
+			"name": "myDataSource",
 			"connector": "postgresql",
 			"url": "$DATABASE_URL"
 		}
@@ -16,4 +16,19 @@ replaced with $ENV_VARIABLE_NAME, like this:
 
 This will replace the "url" setting with the value of the DATABASE_URL environment variable.
 
-This can also use the 
+This can also use the following format:
+
+	"myDataSource": {
+		"connector": "pgenv",
+		"properties": {
+			"name": "myDataSource",
+			"host": "$DB_HOST",
+			"port": "$DB_PORT",
+			"database": "$DB_NAME",
+			"username": "$DB_USER",
+			"password": "$DB_PASS",
+			"name": "postgres",
+			"connector": "postgresql",
+			"ssl": true
+		}
+	}

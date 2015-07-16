@@ -10,16 +10,21 @@ exports.initialize = function initializeDataSource(dataSource, callback) {
   debug('properties:', properties);
   for (var key in properties) {
     var value = properties[key];
-    var match = value.match(/^\$(.*)$/);
-    if (match) {
-      settings[key] = value.replace(match[0], process.env[match[1]]);
+    if (typeof(value) === 'string') {
+      var match = value.match(/^\$(.*)$/);
+      if (match) {
+        var newValue = process.env[match[1]];
+
+        var intVal = parseInt(newValue);
+        if (!isNaN(intVal)) newValue = intVal;
+
+        settings[key] = value.replace(match[0], newValue);
+      }
     }
   }
   debug('settings:', settings);
 
   dataSource.settings = settings;
   pgConnector.initialize(dataSource, callback);
-
-  // throw new Error('EXIT');
 
 };
