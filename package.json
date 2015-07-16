@@ -2,6 +2,12 @@
   "name": "loopback-connector-pgenv",
   "version": "1.0.3",
   "description": "loopback postgres connector that can be configured with environment variable tokens",
+  "keywords": [
+    "LoopBack",
+    "PostgreSQL",
+    "DataSource",
+    "Connector"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/arthurmilliken/loopback-connector-pgenv.git"
   },
-  "author": "",
+  "author": "Arthur Milliken <amilliken@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/arthurmilliken/loopback-connector-pgenv/issues"
